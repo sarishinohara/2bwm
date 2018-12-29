@@ -32,7 +32,7 @@ static const bool inverted_colors = false;
 /*0) Outer border size. If you put this negative it will be a square.
  *1) Full borderwidth    2) Magnet border size
  *3) Resize border size  */
-static const uint8_t borders[] = {0,0,0,8};
+static const uint8_t borders[] = {8,8,8,8};
 /* Windows that won't have a border.
  * It uses substring comparison with what is found in the WM_NAME
  * attribute of the window. You can test this using `xprop WM_NAME`
@@ -50,7 +50,7 @@ static const char *std[]   = { "std", NULL };
 static const char *brightup[]   = { "light", "-A","0.5", NULL };
 static const char *brightdown[]   = { "light", "-U", "0.5", NULL };
 static const char *volup[]   = { "amixer", "-q", "set", "Master", "5%+", NULL };
-static const char *voldown[]   = { "amixer", "-q", "set, "Master", "5%-", NULL };
+static const char *voldown[]   = { "amixer", "-q", "set", "Master", "5%-", NULL };
 static const char *wall[]   = { "wall", NULL };
 static const char *wald[]   = { "wald", NULL };
 static const char *date[]   = { "dato", NULL };
