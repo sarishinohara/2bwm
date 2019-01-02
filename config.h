@@ -105,6 +105,7 @@ static key keys[] = {
     {  MOD |SHIFT,        XK_Down,       resizestep,        {.i=TWOBWM_RESIZE_DOWN}},
     {  MOD |SHIFT,        XK_Right,      resizestep,        {.i=TWOBWM_RESIZE_RIGHT}},
     {  MOD |SHIFT,        XK_Left,       resizestep,        {.i=TWOBWM_RESIZE_LEFT}},
+    {  MOD ,              XK_r,          mousemotion,       {.i=TWOBWM_RESIZE}},
     // Resize a window slower
     {  MOD |SHIFT|CONTROL,XK_Up,         resizestep,        {.i=TWOBWM_RESIZE_UP_SLOW}},
     {  MOD |SHIFT|CONTROL,XK_Down,       resizestep,        {.i=TWOBWM_RESIZE_DOWN_SLOW}},
@@ -167,7 +168,7 @@ static key keys[] = {
     {  MOD ,              XK_comma,      changescreen,      {.i=TWOBWM_NEXT_SCREEN}},
     {  MOD ,              XK_period,     changescreen,      {.i=TWOBWM_PREVIOUS_SCREEN}},
     // Raise or lower a window
-    {  MOD ,              XK_r,          raiseorlower,      {}},
+    {  MOD ,              XK_s,          raiseorlower,      {}},
     // Next/Previous workspace
     // {  MOD ,              XK_v,          nextworkspace,     {}},
     // {  MOD ,              XK_c,          prevworkspace,     {}},
@@ -230,7 +231,7 @@ static key keys[] = {
 // the last argument makes it a root window only event
 static Button buttons[] = {
     {  MOD        ,XCB_BUTTON_INDEX_1,     mousemotion,   {.i=TWOBWM_MOVE}, false},
-    {  MOD        ,XCB_BUTTON_INDEX_3,     mousemotion,   {.i=TWOBWM_RESIZE}, false},
+    {  MOD        ,XCB_BUTTON_INDEX_3,     mousemotion,   {.i=TWOBWM_RESIZE}, true},
     {  0          ,XCB_BUTTON_INDEX_3,     start,         {.com = menucmd}, true},
     {  MOD|SHIFT,  XCB_BUTTON_INDEX_1,     changeworkspace, {.i=0}, false},
     {  MOD|SHIFT,  XCB_BUTTON_INDEX_3,     changeworkspace, {.i=1}, false},
