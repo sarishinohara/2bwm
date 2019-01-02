@@ -105,7 +105,6 @@ static key keys[] = {
     {  MOD |SHIFT,        XK_Down,       resizestep,        {.i=TWOBWM_RESIZE_DOWN}},
     {  MOD |SHIFT,        XK_Right,      resizestep,        {.i=TWOBWM_RESIZE_RIGHT}},
     {  MOD |SHIFT,        XK_Left,       resizestep,        {.i=TWOBWM_RESIZE_LEFT}},
-    {  MOD ,              XK_r,          mousemotion,       {.i=TWOBWM_RESIZE}},
     // Resize a window slower
     {  MOD |SHIFT|CONTROL,XK_Up,         resizestep,        {.i=TWOBWM_RESIZE_UP_SLOW}},
     {  MOD |SHIFT|CONTROL,XK_Down,       resizestep,        {.i=TWOBWM_RESIZE_DOWN_SLOW}},
@@ -168,7 +167,7 @@ static key keys[] = {
     {  MOD ,              XK_comma,      changescreen,      {.i=TWOBWM_NEXT_SCREEN}},
     {  MOD ,              XK_period,     changescreen,      {.i=TWOBWM_PREVIOUS_SCREEN}},
     // Raise or lower a window
-    {  MOD ,              XK_s,          raiseorlower,      {}},
+    {  MOD ,              XK_r,          raiseorlower,      {}},
     // Next/Previous workspace
     // {  MOD ,              XK_v,          nextworkspace,     {}},
     // {  MOD ,              XK_c,          prevworkspace,     {}},
@@ -238,3 +237,4 @@ static Button buttons[] = {
     {  MOD|ALT,    XCB_BUTTON_INDEX_1,     changescreen,    {.i=1}, false},
     {  MOD|ALT,    XCB_BUTTON_INDEX_3,     changescreen,    {.i=0}, false}
 };
+
